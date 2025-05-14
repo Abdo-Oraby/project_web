@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Customer Management System</h1>
+    </header>
+
+    <main>
+      <div class="table-container">
+        <table id="customersTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="customersData">
+          </tbody>
+        </table>
+      </div>
+
+      <button id="addCustomerBtn" class="add-btn">Add New Customer</button>
+
+      <div id="customerModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle">Add New Customer</h2>
+          <form id="customerForm">
+            <input type="hidden" id="customerId" />
+            <div class="form-group">
+              <label for="customerName">Name</label>
+              <input type="text" id="customerName" required />
+            </div>
+            <div class="form-group">
+              <label for="customerEmail">Email</label>
+              <input type="email" id="customerEmail" required />
+            </div>
+            <div class="form-group">
+              <label for="customerPhone">Phone</label>
+              <input type="tel" id="customerPhone" required />
+            </div>
+            <div class="form-group">
+              <label for="customerAddress">Address</label>
+              <textarea id="customerAddress" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
